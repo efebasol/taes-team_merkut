@@ -18,8 +18,8 @@ AUX     -->
 //* Lora bağlantı ayarları
 SoftwareSerial LoraSerial(2, 3);
 LoRa_E32 LoraTAES(&LoraSerial);
-#define M0 11
-#define M1 12
+#define M0 8
+#define M1 7
 
 // Lora Parametre Ayarları
 #define Adres 0

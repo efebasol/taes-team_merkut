@@ -34,7 +34,7 @@ int16_t *XAccel, *YAccel, *ZAccel, *XGyro, *YGyro, *ZGyro;
 SoftwareSerial LoraSerial(10, 11);
 LoRa_E32 LoraTAES(&LoraSerial);
 #define M0 8
-#define M1 9
+#define M1 7
 
 // Lora Parametre Ayarları
 #define Adres 1
@@ -50,7 +50,7 @@ UKK İHA adres     --> 3
 
 struct Signal
 {
-  char sifre[14] = "TAESUAVTEAM22";
+  char sifre[14];
   bool CamMode; //* False --> Kamera içeride, True --> Kamera dışarıda
   byte mode[1];
   byte XJoystick[10];
