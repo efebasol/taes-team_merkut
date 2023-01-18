@@ -9,21 +9,20 @@
 ---- IMU -> MPU6050
 SCL     --> A6  (Offset ayarlarken A5 ama her zaman A5 gerekebilir)
 SDA     --> A7  (Offset ayarlarken A4 ama her zaman A4 gerekebilir)
-INT     --> 4   (Offset alırken bağlı değil) //! Çalışmayabilir? Çalışmazsa Loranın TXD piniyle yer değiştir
+INT     --> 2   (Offset alırken bağlı değil) 
 
 ---- Lora -> E32 433T20D
-M0      --> 11  (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
-M1      --> 12  (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
-RXD     --> 3
-TXD     --> 2
+M0      --> 8   (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
+M1      --> 7   (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
+RXD     --> 11
+TXD     --> 10
 AUX     -->
 
 ---- Servo -> MG996R
-Servo0  --> 5
-Servo1  --> 6
-Servo2  --> 9
-Servo3  --> 10
-Servo4  --> 11
+Servo0  --> 3
+Servo1  --> 5
+Servo2  --> 6
+Servo3  --> 9
 
 */
 
@@ -32,10 +31,10 @@ MPU6050 IMUsensor;
 int16_t *XAccel, *YAccel, *ZAccel, *XGyro, *YGyro, *ZGyro;
 
 //* Lora bağlantı ayarları
-SoftwareSerial LoraSerial(2, 3);
+SoftwareSerial LoraSerial(10, 11);
 LoRa_E32 LoraTAES(&LoraSerial);
-#define M0 11
-#define M1 12
+#define M0 8
+#define M1 9
 
 // Lora Parametre Ayarları
 #define Adres 1

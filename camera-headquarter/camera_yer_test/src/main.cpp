@@ -7,10 +7,10 @@
 /* Pin Şeması
 
 ---- Lora -> E32 433T20D
-M0      --> 11  (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
-M1      --> 12  (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
-RXD     --> 3
-TXD     --> 2
+M0      --> 8   (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
+M1      --> 7   (Setup yaparken değer alması gerekiyor, her zaman GND alamaz bu yüzden pine bağlı)
+RXD     --> 11
+TXD     --> 10
 AUX     -->
 
 */
